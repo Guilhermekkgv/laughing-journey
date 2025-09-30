@@ -2776,29 +2776,16 @@ function Linux.Create(config)
             local targetElements = {}
             
             if CollapseEnable then
-    CollapseArrow = Linux.Instance("ImageLabel", {
-        Parent = BtnFrame,
-        BackgroundTransparency = 1,
-        Size = UDim2.new(0, 16, 0, 16),
-        Position = UDim2.new(1, -26, 0.5, -8),
-        Image = "rbxassetid://10709791437",
-        ImageColor3 = Color3.fromRGB(210, 210, 210),
-        Rotation = IsCollapsed and 90 or 0,
-        ZIndex = 2
-    })
-
-    local isOpen = false
-    collapseButton.MouseButton1Click:Connect(function()
-        isOpen = not isOpen
-        TweenService:Create(CollapseArrow, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-            Rotation = isOpen and 90 or 0
-        }):Play()
-
-        -- aqui continua o que já existe pra abrir/fechar o conteúdo
-    end)
-end
-                
-                
+                CollapseArrow = Linux.Instance("ImageLabel", {
+                    Parent = BtnFrame,
+                    BackgroundTransparency = 1,
+                    Size = UDim2.new(0, 16, 0, 16),
+                    Position = UDim2.new(1, -26, 0.5, -8),
+                    Image = "rbxassetid://10709791437",
+                    ImageColor3 = Color3.fromRGB(210, 210, 210),
+                    Rotation = IsCollapsed and 90 or 0,
+                    ZIndex = 2
+                })
                 
                 CollapseGradientLine = Linux.Instance("Frame", {
                     Parent = BtnFrame,
